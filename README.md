@@ -3,7 +3,7 @@
 
 The purpose of this assignment is to create a functional dictionary that translates from French to English, using a Binary Search Tree.
 
-The assignment is broken up into three parts, and must be completed in that order. You are provided with a few header files to get you started, but ultimately the implementation is entirely up to you. Importantly however, your solution must perform to an acceptable optimisation level. You may find it helpful to define your own ADT that houses your BST implementation.
+The assignment is broken up into three parts, and must be completed in that order. You are provided with a few header files to get you started, but ultimately the implementation is entirely up to you. Importantly however, your solution must perform to an acceptable optimisation level.
 
 ## Using the dictionary
 The entry point into the dictionary is through the translator.c file. This has been provided and implemented for you, and calls the functions that you will need to implement in this assignment. The dictionary may be run from the CLI as follows: `$_ ./translator <translation file>`, where `<translation file>` refers to the file that holds a list of translations. Once the translator is running, you may use the following commands:
