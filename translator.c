@@ -12,6 +12,7 @@ static char **tokenise(char *s, int *ntokens);
 static int getCommand(char *buf);
 
 static void runSearch(Dict d, char **tokens);
+static void runList(Dict d, char **tokens);
 static void runHelp(Dict d, char **tokens);
 
 static bool validateSearch(char **tokens);
@@ -34,7 +35,7 @@ typedef struct command {
 
 static Command COMMANDS[NUM_COMMANDS] = {
     {"s", 1, runSearch, validateSearch, "<string>", "search for a verb"},
-    {"l", 1, runSearch, validateSearch, "", "list most frequently searched verbs"},
+    {"l", 0, runList, validateNoArgs, "", "list most frequently searched verbs"},
     {"q", 0, NULL, validateNoArgs, "", "quit"},
     {"?", 0, runHelp, validateNoArgs, "", "show this message"},
 };
@@ -105,6 +106,9 @@ static void runSearch(Dict d, char **tokens) {
     char query[MAX];
     sscanf(tokens[1], "%s", query);
     searchDict(d, query);
+}
+static void runList(Dict d, char **tokens) {
+    listFrequent(d);
 }
 
 static void runHelp(Dict d, char **tokens) {
