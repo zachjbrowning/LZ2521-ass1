@@ -5,7 +5,11 @@ typedef struct Node *Dict;
 Dict buildDict(char *filename);
 
 // PART 2
-void searchDict(char *query);
+void searchDict(Dict dict, char *query);
 
 // PART 3
-void listFrequent();
+void listFrequent(Dict dict);
+
+
+// YOU ALSO NEED TO IMPLEMENT
+void freeDict(Dict dict);
