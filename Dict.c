@@ -2,15 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Dict.h"
-
-typedef struct dictNode Node;
-
-typedef struct _dictNode {
-    char *verb;
-    char *translation;
-    Node *left;
-    Node *right;
-} dictNode;
+#include "BST.h"
 
 Dict buildDict(char *filename) {
     return NULL;
