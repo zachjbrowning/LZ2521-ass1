@@ -1,6 +1,7 @@
 #our files
 translator
 practice
+.vscode
 
 # Prerequisites
 *.d
