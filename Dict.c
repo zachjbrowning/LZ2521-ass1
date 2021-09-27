@@ -3,7 +3,7 @@
 #include <string.h>
 #include "Dict.h"
 
-Dict buildDict(char *filename) {
+Dict buildDict(FILE *file) {
     return NULL;
 }
 
