@@ -4,8 +4,26 @@
 #include "Dict.h"
 #include "BST.h"
 
-Dict buildDict(char *filename) {
-    return NULL;
+#define MAX 8192
+
+Dict buildDict(FILE *file) {
+    Dict tree = NULL;
+
+    char translation[MAX];
+    char verb[MAX];
+
+    while (fscanf(file, "%s", verb) != EOF) {
+
+        fgets(translation, MAX, file);
+
+        if (translation[strlen(translation) - 1] == '\n') {
+            translation[strlen(translation) - 1] = '\0';
+        }
+
+        tree = insertNode(tree, verb, translation);
+    }
+
+    return tree;
 }
 
 // PART 2

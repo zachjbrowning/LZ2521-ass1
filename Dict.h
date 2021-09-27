@@ -1,8 +1,9 @@
+#include <stdio.h>
 
-typedef struct Node *Dict;
+typedef struct node *Dict;
 
 // PART 1
-Dict buildDict(char *filename);
+Dict buildDict(FILE *file);
 
 // PART 2
 void searchDict(Dict dict, char *query);

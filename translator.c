@@ -50,7 +50,14 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    Dict dictionary = buildDict(argv[1]);
+    FILE *translations = fopen(argv[1], "r");
+    if (translations == NULL) {
+        printf("Invalid filename.\n");
+        return 0;
+    }
+
+    Dict dictionary = buildDict(translations);
+    fclose(translations);
 
     if (dictionary == NULL) {
         printf("Please implememnt Part 1 to use translator.\n");
